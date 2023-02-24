@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6c87bc3c-6ecd-49dd-a2cf-0ca36ce65e38" name="Changes" comment="增加代码">
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/client/CheckWriteIdleHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/client/ClientBusiHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/client/HearBeatReqHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/MetricsHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/SecurityCenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/asyncpro/AsyncBusiProcess.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/asyncpro/DefaultTaskProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/asyncpro/ITaskProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/vo/EncryptUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/vo/MakeMsgID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/vo/MsgHeader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/resources/logback.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/NettyConst.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/checkread/EchoClientCR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/checkread/EchoClientCRHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/checkread/EchoServerCR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/checkread/EchoServerCRHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/outread/EchoClientOR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/outread/EchoClientORHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/outread/EchoServerOR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/outread/EchoServerORHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/outread/ServerOutReadHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/sharehndler/EchoClientMC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/sharehndler/EchoClientMCHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/sharehndler/EchoServerMC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/sharehndler/EchoServerMCHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/sharehndler/MessageCountHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/demo/EchoCliSHHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/demo/EchoCliStickyHalf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/demo/EchoSvrSHHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/demo/EchoSvrStickyHalf.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/server/autossl/AutoSSLHttpServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/server/autossl/AutoSSLServerHandlerInit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/nio/src/cn/tuling/nio/nio/outread/NioServerOR.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ketang-tl-netty/nio/src/cn/tuling/nio/nio/outread/NioServerORHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/BusiClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/BusiClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/NettyClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/NettyClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/NettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/NettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/busivo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/busivo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/busivo/UserContact.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/busivo/UserContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/client/ClientInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/client/ClientInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/client/LoginAuthReqHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/client/LoginAuthReqHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/kryocodec/KryoDecoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/kryocodec/KryoDecoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/kryocodec/KryoEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/kryocodec/KryoEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/kryocodec/KryoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/kryocodec/KryoFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/kryocodec/KryoSerializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/kryocodec/KryoSerializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/kryocodec/TestKryoCodeC.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/kryocodec/TestKryoCodeC.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/HeartBeatRespHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/HeartBeatRespHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/LoginAuthRespHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/LoginAuthRespHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/ServerBusiHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/ServerBusiHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/ServerInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/server/ServerInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/vo/MessageType.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/vo/MessageType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/vo/MyMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/vo/MyMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/vo/NettyConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-adv/src/main/java/cn/tuling/nettyadv/vo/NettyConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/TooLongExSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/TooLongExSample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/echo/EchoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/echo/EchoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/echo/EchoClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/echo/EchoClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/echo/EchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/echo/EchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/echo/EchoServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/echo/EchoServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/serializable/msgpack/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/serializable/msgpack/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/delimiter/DelimiterClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/delimiter/DelimiterClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/delimiter/DelimiterEchoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/delimiter/DelimiterEchoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/delimiter/DelimiterEchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/delimiter/DelimiterEchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/delimiter/DelimiterServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/delimiter/DelimiterServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/fixed/FixedLengthClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/fixed/FixedLengthClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/fixed/FixedLengthEchoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/fixed/FixedLengthEchoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/fixed/FixedLengthEchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/fixed/FixedLengthEchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/fixed/FixedLengthServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/fixed/FixedLengthServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/linebase/LineBaseClientHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/linebase/LineBaseClientHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/linebase/LineBaseEchoClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/linebase/LineBaseEchoClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/linebase/LineBaseEchoServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/linebase/LineBaseEchoServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/linebase/LineBaseServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/main/java/cn/tuling/nettybasic/splicing/linebase/LineBaseServerHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/test/java/cn/tuling/nettybasic/embedded/AbsIntegerEncoderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/test/java/cn/tuling/nettybasic/embedded/AbsIntegerEncoderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/test/java/cn/tuling/nettybasic/embedded/FixedLengthFrameDecoderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/test/java/cn/tuling/nettybasic/embedded/FixedLengthFrameDecoderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/test/java/cn/tuling/nettybasic/embedded/FrameChunkDecoderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-basic/src/test/java/cn/tuling/nettybasic/embedded/FrameChunkDecoderTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-http/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-http/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/client/HttpClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/client/HttpClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/client/HttpClientInboundHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/client/HttpClientInboundHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/server/BusiHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/server/BusiHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/server/HttpServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/server/HttpServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/server/RespConstant.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/server/RespConstant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/server/ServerHandlerInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/netty-http/src/main/java/cn/tuling/nettyhttp/server/ServerHandlerInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/nio/src/cn/tuling/nio/nio/NioClientHandle.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/nio/src/cn/tuling/nio/nio/NioClientHandle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/nio/src/cn/tuling/nio/nio/writeable/NioServerHandleWriteable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/nio/src/cn/tuling/nio/nio/writeable/NioServerHandleWriteable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ketang-tl-netty/nio/src/cn/tuling/nio/nio/writeable/NioServerWritable.java" beforeDir="false" afterPath="$PROJECT_DIR$/ketang-tl-netty/nio/src/cn/tuling/nio/nio/writeable/NioServerWritable.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:\Program Files\JetBrains\IntelliJ IDEA 2020.2.1\plugins\maven\lib\maven3" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2MBtoiKAkW0UZncq53S3xfq57xL" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.CommitDialog" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6c87bc3c-6ecd-49dd-a2cf-0ca36ce65e38" name="Changes" comment="" />
+      <created>1677252987011</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677252987011</updated>
+      <workItem from="1677252989706" duration="282000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="增加代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加代码" />
+  </component>
+</project>
