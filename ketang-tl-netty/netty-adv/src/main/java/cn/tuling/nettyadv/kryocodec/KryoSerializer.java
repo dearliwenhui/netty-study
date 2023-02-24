@@ -10,7 +10,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
 /**
- * @author Mark老师   享学课堂 https://enjoy.ke.qq.com
+ * @author Mark老师
  * 类说明：Kryo的序列化器，负责序列化和反序列化
  */
 public class KryoSerializer {
@@ -32,6 +32,24 @@ public class KryoSerializer {
             e.printStackTrace();
         }
         out.writeBytes(b);
+    }
+
+    /*序列化为一个字节数组，主要用在消息摘要上*/
+    public static byte[] obj2Bytes(Object object) {
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        Output output = new Output(baos);
+        kryo.writeClassAndObject(output, object);
+        output.flush();
+        output.close();
+
+        byte[] b = baos.toByteArray();
+        try {
+            baos.flush();
+            baos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return b;
     }
 
     /*反序列化*/

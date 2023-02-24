@@ -10,7 +10,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 作者：Mark
- * 创建日期：2018/08/26
  * 类说明：
  */
 public class FixedLengthClientHandler extends SimpleChannelInboundHandler<ByteBuf> {

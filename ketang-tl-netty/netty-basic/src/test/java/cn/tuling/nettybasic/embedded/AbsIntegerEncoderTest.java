@@ -10,7 +10,6 @@ import static org.junit.Assert.*;
 
 /**
  * 作者：Mark/Maoke
- * 创建日期：2018/08/26
  * 类说明：测试出站处理,可以通过修改AbsIntegerEncoder看运行结果
  */
 public class AbsIntegerEncoderTest {

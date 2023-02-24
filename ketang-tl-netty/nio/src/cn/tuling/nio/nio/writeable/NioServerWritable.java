@@ -14,7 +14,7 @@ public class NioServerWritable {
     }
     public static void main(String[] args){
         nioServerHandle = new NioServerHandleWriteable(DEFAULT_PORT);
-        new Thread(nioServerHandle,"Server").start();
+        new Thread(nioServerHandle,"NIO_Server").start();
     }
 
 }

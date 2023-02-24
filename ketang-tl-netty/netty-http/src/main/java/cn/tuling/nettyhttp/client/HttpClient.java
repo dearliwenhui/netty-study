@@ -13,20 +13,17 @@ import io.netty.channel.socket.nio.NioSocketChannel;
 import io.netty.handler.codec.http.*;
 
 /**
- * @author Mark老师   享学课堂 https://enjoy.ke.qq.com
- * 往期课程和VIP课程咨询 依娜老师  QQ：2133576719
+ * @author Mark老师
  * 类说明：
  */
 public class HttpClient {
     public static final String HOST  = "127.0.0.1";
-    private static final boolean SSL = false;
     public void connect(String host, int port) throws Exception {
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
             Bootstrap b = new Bootstrap();
             b.group(workerGroup);
             b.channel(NioSocketChannel.class);
-            b.option(ChannelOption.SO_KEEPALIVE, true);
             b.handler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 public void initChannel(SocketChannel ch) throws Exception {
@@ -50,6 +47,10 @@ public class HttpClient {
     }
 
     public static void main(String[] args) throws Exception {
+        if(HttpServer.SSL) {
+            System.out.println("服务器处于SSL模式，本客户端不支持，退出");
+            return;
+        }
         HttpClient client = new HttpClient();
         client.connect("127.0.0.1", HttpServer.port);
     }

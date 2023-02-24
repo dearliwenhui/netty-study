@@ -15,7 +15,6 @@ import java.net.InetSocketAddress;
 
 /**
  * 作者：Mark
- * 创建日期：2018/08/25
  * 类说明：
  */
 public class DelimiterEchoServer {

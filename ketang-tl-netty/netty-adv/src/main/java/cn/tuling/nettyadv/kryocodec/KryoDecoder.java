@@ -7,7 +7,7 @@ import io.netty.handler.codec.ByteToMessageDecoder;
 import java.util.List;
 
 /**
- * @author Mark老师   享学课堂 https://enjoy.ke.qq.com
+ * @author Mark老师
  * 类说明：反序列化的Handler
  */
 public class KryoDecoder extends ByteToMessageDecoder {

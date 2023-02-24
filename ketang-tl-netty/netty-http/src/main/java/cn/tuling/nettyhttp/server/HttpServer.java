@@ -10,15 +10,14 @@ import io.netty.handler.ssl.SslContextBuilder;
 import io.netty.handler.ssl.util.SelfSignedCertificate;
 
 /**
- * @author Mark老师   享学课堂 https://enjoy.ke.qq.com
- * 往期课程和VIP课程咨询 依娜老师  QQ：2133576719
+ * @author Mark老师
  * 类说明：
  */
 public class HttpServer {
     public static final int port = 6789; //设置服务端端口
     private static EventLoopGroup group = new NioEventLoopGroup();   // 通过nio方式来接收连接和处理连接
     private static ServerBootstrap b = new ServerBootstrap();
-    private static final boolean SSL = false;/*是否开启SSL模式*/
+    public static final boolean SSL = true;/*是否开启SSL模式*/
 
     /**
      * Netty创建全部都是实现自AbstractBootstrap。
@@ -41,6 +40,7 @@ public class HttpServer {
             // 服务器绑定端口监听
             ChannelFuture f = b.bind(port).sync();
             System.out.println("服务端启动成功,端口是:"+port);
+            System.out.println("服务器启动模式： "+( SSL ? "SSL安全模式" :"普通模式"));
             // 监听服务器关闭监听
             f.channel().closeFuture().sync();
         } finally {

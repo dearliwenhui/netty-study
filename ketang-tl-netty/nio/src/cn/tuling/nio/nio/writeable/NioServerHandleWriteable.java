@@ -57,6 +57,7 @@ public class NioServerHandleWriteable implements Runnable{
                 Set<SelectionKey> keys = selector.selectedKeys();
                 Iterator<SelectionKey> it = keys.iterator();
                 SelectionKey key = null;
+                System.out.println("--------由线程 "+Thread.currentThread().getName()+" 处理-------");
                 while(it.hasNext()){
                     key = it.next();
                     it.remove();
@@ -93,7 +94,7 @@ public class NioServerHandleWriteable implements Runnable{
                 //通过ServerSocketChannel的accept创建SocketChannel实例
                 //完成该操作意味着完成TCP三次握手，TCP物理链路正式建立
                 SocketChannel sc = ssc.accept();
-                System.out.println("======socket channel 建立连接=======");
+                System.out.println("socket channel 建立连接");
                 //设置为非阻塞的
                 sc.configureBlocking(false);
                 //连接已经完成了，可以开始关心读事件了
@@ -101,8 +102,8 @@ public class NioServerHandleWriteable implements Runnable{
             }
             //读消息
             if(key.isReadable()){
-                System.out.println("======socket channel 数据准备完成，" +
-                        "可以去读==读取=======");
+                System.out.println("socket channel 数据准备完成，" +
+                        "可以去读");
                 SocketChannel sc = (SocketChannel) key.channel();
                 //创建ByteBuffer，并开辟一个1M的缓冲区
                 ByteBuffer buffer = ByteBuffer.allocate(1024);
@@ -131,14 +132,19 @@ public class NioServerHandleWriteable implements Runnable{
                 }
             }
             if(key.isWritable()){
+                System.out.println("socket channel 缓冲为空，" +
+                        "准备写");
                 SocketChannel sc = (SocketChannel) key.channel();
                 ByteBuffer buffer = (ByteBuffer)key.attachment();
-                if(buffer.hasRemaining()){
+                if(buffer!=null && buffer.hasRemaining()){
                     int count = sc.write(buffer);
                     System.out.println("write :"+count
                             +"byte, remaining:"+buffer.hasRemaining());
-                }else{
-                    /*取消对写的注册*/
+                }
+                else{
+                    key.attach(null);
+                    /*取消对写的注册，只关注读*/
+                    System.out.println("没有数据需要写，取消写注册");
                     key.interestOps(SelectionKey.OP_READ);
                 }
             }

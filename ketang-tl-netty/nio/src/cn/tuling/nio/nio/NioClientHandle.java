@@ -97,14 +97,12 @@ public class NioClientHandle implements Runnable{
         if(key.isValid()){
             //获得关心当前事件的channel
             SocketChannel sc = (SocketChannel) key.channel();
-            /**
-             * Dave：判断触发的是否是连接事件，如果是连接完成，则注册read事件
-             */
             //连接事件
             if(key.isConnectable()){
                 if(sc.finishConnect()){
                     socketChannel.register(selector,
-                        SelectionKey.OP_READ);}
+                        SelectionKey.OP_READ);
+                }
                 else System.exit(1);
             }
             //有数据可读事件
@@ -127,9 +125,6 @@ public class NioClientHandle implements Runnable{
                 }
                 //链路已经关闭，释放资源
                 else if(readBytes<0){
-                    /**
-                     * Dave：取消selector和channel的关联关系
-                     */
                     key.cancel();
                     sc.close();
                 }
@@ -153,12 +148,6 @@ public class NioClientHandle implements Runnable{
     }
 
     private void doConnect() throws IOException{
-        /**
-         * Dave：这里是非阻塞的连接，TCP的连接需要三次握手才能完成，也就是说调用connect方法后不是立刻建立连接，
-         * TCP三次握手是一个过程，调用完connect之后，由于客户端是非阻塞的，所以此时可能还未真正建立连接。
-         * socketChannel.connect(new InetSocketAddress(host,port)) = true ，表示连接建立完成，则注册OP_READ事件，关注服务端的数据。
-         * 如果是false，表示TCP的三次握手未完成，则需要再次注册OP_CONNECT 事件。
-         */
         /*非阻塞的连接*/
         if(socketChannel.connect(new InetSocketAddress(host,port))){
             socketChannel.register(selector,SelectionKey.OP_READ);

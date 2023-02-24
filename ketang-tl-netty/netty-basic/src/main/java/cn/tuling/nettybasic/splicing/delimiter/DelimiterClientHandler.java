@@ -10,7 +10,6 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * 作者：Mark
- * 创建日期：2018/08/26
  * 类说明：
  */
 public class DelimiterClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
@@ -27,7 +26,7 @@ public class DelimiterClientHandler extends SimpleChannelInboundHandler<ByteBuf>
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         ByteBuf msg = null;
-        String request = "Mark,Lison,King,James,Deer"
+        String request = "Mark,zhuge,zhouyu,fox,loulan"
                 + DelimiterEchoServer.DELIMITER_SYMBOL;
         for(int i=0;i<10;i++){
             msg = Unpooled.buffer(request.length());

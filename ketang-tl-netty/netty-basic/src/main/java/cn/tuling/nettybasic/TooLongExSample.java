@@ -18,6 +18,8 @@ public class TooLongExSample  extends ByteToMessageDecoder {
         if(readable>MAX_SIZE){
             ctx.close();
             throw new TooLongFrameException("传入的数据太多");
+        }else{
+            out.add(in);
         }
 
     }

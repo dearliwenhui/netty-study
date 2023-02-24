@@ -6,8 +6,7 @@ import cn.tuling.nettyadv.busivo.UserContact;
 import java.util.Scanner;
 
 /**
- * @author Mark老师   享学课堂 https://enjoy.ke.qq.com
- * 往期课程和VIP课程咨询 依娜老师  QQ：2133576719
+ * @author Mark老师
  * 类说明：业务方如何调用Netty客户端演示
  */
 public class BusiClient {
@@ -27,23 +26,34 @@ public class BusiClient {
                 break;
             } else if ("q".equals(msg.toLowerCase())) {
                 nettyClient.close();
+                scanner.close();
                 while(nettyClient.isConnected()){
                     synchronized (nettyClient){
+                        System.out.println("等待网络关闭完成....");
                         nettyClient.wait();
                     }
                 }
-                scanner.close();
                 System.exit(1);
             } else if("v".equals(msg.toLowerCase())){
                 User user = new User();
                 user.setAge(19);
-                String userName = "ABCDEFG --->1";
+                String userName = "mark";
                 user.setUserName(userName);
                 user.setId("No:1");
                 user.setUserContact(
-                        new UserContact(userName+"@xiangxue.com",
+                        new UserContact(userName+"@tuling.com",
                                 "133"));
                 nettyClient.send(user);
+            }else if("o".equals(msg.toLowerCase())){
+                User user = new User();
+                user.setAge(23);
+                String userName = "oneway";
+                user.setUserName(userName);
+                user.setId("No:1");
+                user.setUserContact(
+                        new UserContact(userName+"@tuling.com",
+                                "331"));
+                nettyClient.sendOneWay(user);
             }
             else {
                 nettyClient.send(msg);

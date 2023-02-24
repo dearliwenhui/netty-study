@@ -2,7 +2,7 @@ package cn.tuling.nettyadv.busivo;
 
 
 /**
- * @author Mark老师   享学课堂 https://enjoy.ke.qq.com
+ * @author Mark老师
  * 类说明：实体类
  */
 public class UserContact {

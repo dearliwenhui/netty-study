@@ -1,21 +1,21 @@
 package cn.tuling.nettyadv.vo;
 
 /**
- * @author Mark老师   享学课堂 https://enjoy.ke.qq.com
+ * @author Mark老师
  * 类说明：消息实体类
  */
 public final class MyMessage {
 
-    private MyHeader myHeader;
+    private MsgHeader msgHeader;
 
     private Object body;
 
-    public final MyHeader getMyHeader() {
-    	return myHeader;
+    public final MsgHeader getMyHeader() {
+    	return msgHeader;
     }
 
-    public final void setMyHeader(MyHeader myHeader) {
-    	this.myHeader = myHeader;
+    public final void setMyHeader(MsgHeader msgHeader) {
+    	this.msgHeader = msgHeader;
     }
 
     public final Object getBody() {
@@ -28,6 +28,6 @@ public final class MyMessage {
 
     @Override
     public String toString() {
-    	return "MyMessage [myHeader=" + myHeader + "][body="+body+"]";
+    	return "MyMessage [myHeader=" + msgHeader + "][body="+body+"]";
     }
 }
