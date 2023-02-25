@@ -142,6 +142,7 @@ public class NioServerHandleWriteable implements Runnable{
                             +"byte, remaining:"+buffer.hasRemaining());
                 }
                 else{
+                    //必须清空selectKey对writeBuffer对象的引用，否者writeBuffer不会被GC回收，造成内存泄漏
                     key.attach(null);
                     /*取消对写的注册，只关注读*/
                     System.out.println("没有数据需要写，取消写注册");
@@ -161,6 +162,8 @@ public class NioServerHandleWriteable implements Runnable{
         writeBuffer.put(bytes);
         //flip操作
         writeBuffer.flip();
+        //Dave：使用OP_WRITE事件回写数据，需要将数据ByteBuffer放到selectKey的attachment中，
+        // 让selectKey指向writeBuffer的内存地址，这样writeBuffer能进行传递不会丢失
         channel.register(selector,SelectionKey.OP_WRITE|SelectionKey.OP_READ,
                 writeBuffer);
     }
