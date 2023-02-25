@@ -39,15 +39,17 @@ public class EchoServer  {
             /*服务端启动必备*/
             ServerBootstrap b = new ServerBootstrap();
             b.group(group)
-                    .channel(NioServerSocketChannel.class)
-                    .localAddress(new InetSocketAddress(port))
-                    .childHandler(new ChannelInitializer<SocketChannel>() {
+                    .channel(NioServerSocketChannel.class)/*指定使用NIO的通信模式*/
+                    .localAddress(new InetSocketAddress(port))/*指定监听端口*/
+                    .childHandler(new ChannelInitializer<SocketChannel>() {/*handler() 作用于ServerSocketChannel ;childHandler()作用于接收客户端连接后，ServerSocketChannel生成的SocketChannel*/
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline().addLast(new EchoServerHandler());
                         }
                     });
 
+            //将端口和当前应用进行绑定，在netty的操作中，基本上都是异步的，bind()方法会产生一个ChannelFuture，说明bind方法是异步操作。
+            //当代码执行到这里，不会阻塞等待绑定完成，所以加上sync()会阻塞到bind完成
             /*异步绑定到服务器，sync()会阻塞到完成*/
             ChannelFuture f = b.bind().sync();
             LOG.info("服务器启动完成。");
