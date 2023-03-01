@@ -58,6 +58,7 @@ public class LoginAuthRespHandler extends ChannelInboundHandlerAdapter {
 					ctx.close();
 				}
 			}
+			/*资源没有向后传递，必须进行释放，否则会内存泄漏*/
 			ReferenceCountUtil.release(msg);
 		}else{
 			ctx.fireChannelRead(msg);
