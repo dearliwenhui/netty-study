@@ -45,6 +45,7 @@ public class LoginAuthRespHandler extends ChannelInboundHandlerAdapter {
 				InetSocketAddress address = (InetSocketAddress) ctx.channel()
 						.remoteAddress();
 				String ip = address.getAddress().getHostAddress();
+				/*ip白名单检查*/
 				if(SecurityCenter.isWhiteIP(ip)){
 					SecurityCenter.addLoginUser(nodeIndex);
 					loginResp = buildResponse((byte) 0);
