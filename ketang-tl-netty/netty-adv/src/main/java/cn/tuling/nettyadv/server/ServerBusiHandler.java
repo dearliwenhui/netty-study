@@ -34,6 +34,7 @@ public class ServerBusiHandler
         if(!headMd5.equals(calcMd5)){
             LOG.error("报文md5检查不通过："+headMd5+" vs "+calcMd5+"，关闭连接");
             ctx.writeAndFlush(buildBusiResp("报文md5检查不通过，关闭连接"));
+            /*主动关闭连接*/
             ctx.close();
         }
         LOG.info(msg.toString());
@@ -41,6 +42,7 @@ public class ServerBusiHandler
             LOG.debug("ONE_WAY类型消息，异步处理");
             AsyncBusiProcess.submitTask(taskProcessor.execAsyncTask(msg));
         }else{
+            /*也可以使用线程池处理，异步处理*/
             LOG.debug("TWO_WAY类型消息，应答");
             ctx.writeAndFlush(buildBusiResp("OK"));
         }
