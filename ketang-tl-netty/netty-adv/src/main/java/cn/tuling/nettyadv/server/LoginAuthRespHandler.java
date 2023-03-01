@@ -76,7 +76,7 @@ public class LoginAuthRespHandler extends ChannelInboundHandlerAdapter {
 
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause)
 	    throws Exception {
-        // 删除缓存
+        // 删除验证用户重复登录的缓存
 		SecurityCenter.removeLoginUser(ctx.channel().remoteAddress().toString());
 		ctx.close();
     }
