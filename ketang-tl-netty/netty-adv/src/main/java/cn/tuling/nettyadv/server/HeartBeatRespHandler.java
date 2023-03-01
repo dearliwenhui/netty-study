@@ -45,6 +45,7 @@ public class HeartBeatRespHandler extends ChannelInboundHandlerAdapter {
 
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
+		/*处理ReadTimeoutHandler(15) 抛出的异常：*/
 		if(cause instanceof ReadTimeoutException){
 			LOG.warn("客户端长时间未通信，可能已经宕机，关闭链路");
 			SecurityCenter.removeLoginUser(ctx.channel().remoteAddress().toString());
