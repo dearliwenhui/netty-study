@@ -17,6 +17,7 @@ import io.netty.handler.timeout.ReadTimeoutHandler;
 public class ClientInit extends ChannelInitializer<SocketChannel> {
     @Override
     protected void initChannel(SocketChannel ch) throws Exception {
+        /*打印字节码报文*/
         ch.pipeline().addLast(new LoggingHandler(LogLevel.DEBUG));
 
         /*连接写空闲检测*/
@@ -30,7 +31,7 @@ public class ClientInit extends ChannelInitializer<SocketChannel> {
         /*序列化相关*/
         ch.pipeline().addLast(new KryoDecoder());
         ch.pipeline().addLast(new KryoEncoder());
-
+        /*打印反序列化报文*/
         ch.pipeline().addLast(new LoggingHandler(LogLevel.DEBUG));
         ch.pipeline().addLast(new LoginAuthReqHandler());
 
