@@ -38,6 +38,7 @@ public class LoginAuthReqHandler extends ChannelInboundHandlerAdapter {
                 ctx.close();
             } else {
                 LOG.info("通过认证，移除本处理器，进入业务通信 : " + message);
+                /*通过认证，移除本处理器，进入业务通信*/
                 ctx.pipeline().remove(this);
                 ReferenceCountUtil.release(msg);
             }
